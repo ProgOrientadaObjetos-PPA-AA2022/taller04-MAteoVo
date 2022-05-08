@@ -37,19 +37,25 @@ public class Estudiante {
     }
     
     public void establecerCalMateria3(double cal){
-        calMateria1 = cal;  
+        calMateria3 = cal;  
     }
     public double obtenerCalMateria3(){
         return calMateria3;
     }
     
     public void calcularPromedio(){
-        promedio = (obtenerCalMateria1() 
+        promedio = (calMateria1 
                 + obtenerCalMateria2() 
                 + obtenerCalMateria3())/3;
     }
     public double obtenerPromedio(){
         return promedio;
+    }
+    
+    public String toString() {
+        String cadena = String.format("Datos del estudiante\n" + "Nombre: %s\n" + "Calificacion materia 1: %.2f\n" + "Calificacion materia 2: %.2f\n" + "Calificacion materia 3: %.2f\n"+ "Promedio de calificaciones: %.2f\n",
+                obtenerNombreEstudiante(),calMateria1,obtenerCalMateria2(),obtenerCalMateria3(),obtenerPromedio());
+        return cadena;
     }
     
 }
